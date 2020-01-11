@@ -30,10 +30,9 @@ public class ICreateDatabaseImpl implements ICreateDatabase {
         Product p2 = new Product("Avocado",10,10000);
         Product p3 = new Product("Pork",1,3000);
 
-        c1.getProducts().add(p1);
-        c1.getProducts().add(p2);
-
-        c2.getProducts().add(p3);
+        p1.setCategory(c1);
+        p2.setCategory(c1);
+        p3.setCategory(c2);
 
         categoryRepository.save(c1);
         categoryRepository.save(c2);

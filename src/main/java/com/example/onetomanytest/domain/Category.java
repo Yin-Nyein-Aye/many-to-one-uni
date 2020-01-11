@@ -1,8 +1,6 @@
 package com.example.onetomanytest.domain;
-
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +14,5 @@ public class Category {
     private Long id;
     private String name;
 
-    @OneToMany
-    @JoinColumn(name = "category_id_fk")
-    private List<Product> products = new ArrayList<>();
+
 }
